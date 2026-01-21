@@ -1,5 +1,6 @@
-import mjml2html from "mjml";
 import { EmailTemplate } from "./email-schema";
+// @ts-ignore
+import mjml2html from "mjml";
 
 export function renderMJML(template: EmailTemplate) {
   const mjml = `

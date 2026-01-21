@@ -1,5 +1,5 @@
 import { EmailTemplate } from "../../lib/email-schema";
-import { updateBlock } from "../../lib/update-block";
+import { updateBlockInTemplate } from "../../lib/update-block";
 
 type Props = {
   template: EmailTemplate;
@@ -22,7 +22,7 @@ export function Inspector({ template, selectedBlockId, onChange }: Props) {
       <select
         value={block.props.fontSize}
         onChange={(e) =>
-          onChange(updateBlock(template, block.id, { fontSize: e.target.value }))
+          onChange(updateBlockInTemplate(template, block.id, { fontSize: e.target.value }))
         }
       >
         <option>14px</option>
@@ -35,14 +35,14 @@ export function Inspector({ template, selectedBlockId, onChange }: Props) {
         type="color"
         value={block.props.color}
         onChange={(e) =>
-          onChange(updateBlock(template, block.id, { color: e.target.value }))
+          onChange(updateBlockInTemplate(template, block.id, { color: e.target.value }))
         }
       />
 
       <select
         value={block.props.align}
         onChange={(e) =>
-          onChange(updateBlock(template, block.id, { align: e.target.value }))
+          onChange(updateBlockInTemplate(template, block.id, { align: e.target.value }))
         }
       >
         <option value="left">Left</option>
