@@ -7,7 +7,7 @@ const Basier = localfont({
   src: "../public/fonts/Basier.ttf",
 });
 export const metadata: Metadata = {
-  title: "Emails | Pocketsflow",
+  title: "Emails | Pocketsflow",  
   description: "Email templates for pocketsflow",
 };
 
